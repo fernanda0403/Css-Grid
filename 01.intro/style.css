@@ -1,0 +1,63 @@
+/* 
+GIRD
+
+  Es un sistema bidimencional qeu nos premite crear layouts a trevés de filas y columnas 
+
+  Facilita la creación de diseños complejos y responsivos
+
+Conceptos Basícos
+
+  container-> Elemento padre al que se le habilita grid o la grilla
+
+  items -> elementos hijos que se encuentran dentro del padre y se veran afectados por la grilla.
+
+Para usar grid y sus propiedades debemos asignar el valor "grid" en su propiedad display
+
+  display: grid;
+
+COLUMNS o Columnas
+
+  Para definir el número y tamaño de las comnas del grid usamos la propiedad:
+
+    grid-template-columns
+
+  Definimos el tamaño de cda columna separados por ub espacio. podemos definir tantas columnas como necesitemos.
+
+    grid-template-columns: 100px 200px;
+
+ROWS o Filas
+
+  Para definir el número y tamaño de las filas del grid usamos la propiedad:
+
+   grid-template-rowa
+
+  Definimos el tamaño de cada fila separando con un espacio. podemos definir tantas filas como necesitemos.
+
+   grid-template-rows: 100px 200px 100px 200px;
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: pink;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 100px 200px;
+  grid-template-rows: 100px 200px 100px 200px;
+
+  background-color: #F9BFFF;
+  border: 2px solid red;
+}
+
+.item {
+  background-color: #BF999F;
+  border: 2px solid blue;
+}
