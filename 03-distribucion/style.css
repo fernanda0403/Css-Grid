@@ -1,0 +1,68 @@
+/* 
+
+Distribucion de elemenos
+
+para ditribuir elementos en la grilla usamos gird-column y grid-row en los item o elementos
+
+Ambs propieddes reciben indicees como parametros de inicio y fin separados por un diagonal "/".
+
+grid-column: i-inicio / i-fin
+grid-row: i-inicio / i-fin
+
+*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(19, 154, 109);
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container {
+  background-color: rgb(152, 68, 147);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(5,1fr);
+}
+
+.item {
+
+  /* grid-column: 2 / 4;
+  grid-row: 2 / 3; */
+
+  text-align: center;
+  font-size: 2rem;
+/*   background-color: rgb(112, 8, 8); */
+  border: 2px solid rgb(254, 183, 5);
+}
+
+.item-1 {
+  grid-column: 3 / 5;
+  grid-row: 3 / 5;
+background-color: aqua;
+}
+
+.item-2 {
+  grid-column: 1 / 4;
+  grid-row: 5;
+  background-color: rgb(0, 80, 179);
+}
+
+.item-3 {
+  grid-column: 4 / 6;
+  grid-row: 2 / 5;
+  background-color: rgb(82, 9, 104);
+}
+
+.item-4 {
+  grid-column: -1 / -3;
+grid-row: -2;
+  background-color: rgb(101, 30, 36);
+}
