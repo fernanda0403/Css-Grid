@@ -1,0 +1,85 @@
+/* 
+
+Grid Template Areas
+
+nos permite definir areas apartir del nombre de las msmas se utiliza la propedad grid-template-areas: 
+
+para definir el nombre de las areas se escribe las filas entre comillas y las columnas separadas por un espacio
+
+grid-template-areas: 
+    "header header header" --> Fila 1
+    "main main sidebar"; --> Fila 2
+    ;
+
+    con essto asignamos los nobres de la grilla
+
+    para colocar los elementos en el area que le correponde usamos las propiedad grid-area y como valor el nombre de área asignda
+
+    grid-area: header;
+
+    ojo: Las áreas se escriben sin comillas
+
+    Para agregar espacio entre las filas y columnas usamos la propiedad gap
+
+    gap 24px
+
+    si queresmos usar espacio distinto para filas y columnas usamos column-gap y row-gap
+
+     column-gap: 12px;
+     row-gap: 12px;
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: blanchedalmond;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas: 
+    "header header header"
+    "main main sidebar"
+    "footer footer footer";
+
+    gap: 24px;
+    column-gap: 12px;
+    row-gap: 12px;
+    padding: 12px;
+
+  height: 100vh;
+  background-color: rgb(255, 205, 141);
+}
+
+.item {
+  border-radius: 24px;
+  text-align: center;
+  background-color: aqua;
+}
+
+.header {
+  grid-area: header;
+background-color: aqua;
+}
+
+.main {
+  grid-area: main;
+  background-color: aquamarine;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: rgb(25, 176, 126);
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(10, 62, 44);
+}
